@@ -1,0 +1,160 @@
+.heroimg {
+    background-image: url(7.jpg);
+    background-size: cover;
+}
+
+.text-mary {
+    color: rgb(255, 255, 255);
+}
+
+.btn-mary {
+    background-color: rgb(94, 94, 95);
+    color: #fff;
+}
+.btn-mary:hover {
+    background-color: rgb(94, 94, 95);
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: rgb(94, 94, 95);
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: rgb(94, 94, 95);
+    color: #fff;
+}
+
+.card {
+    transition: all .4s; /* 動畫漸變 */
+}
+
+.card:hover {
+    box-shadow: 5px 5px 5px #ddd; /* 往右移5px、下移5px、模糊5px、陰影的顏色 */
+    transform: translate(-5px, -5px) rotate(-1deg); /* 往左移5px、上移5px、逆時針旋轉1度 */
+}
+
+h2 {
+    width: 300px;
+    font-size: 35px;
+    font-weight: 400;
+    /* 粗細 */
+    font-family: 'Tilt Warp', sans-serif;
+}
+
+h3 {
+    font-size: 35px;
+    font-weight: 800;
+    /* 粗細 */
+    font-family: 'Tilt Warp', sans-serif;
+    margin-top: 20%;
+    margin-left: 10%;
+}
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+    /* 粗細 */
+    font-family: 'Tilt Warp', sans-serif;
+    margin-left: 70%;
+}
+
+h5 {
+    width: 220px;
+    font-size: 35px;
+    font-weight: 400;
+    /* 粗細 */
+    font-family: 'Tilt Warp', sans-serif;
+    margin:auto;
+}
+
+/* 塗抹動畫 */
+h1 {
+    font-size: 50px;
+    font-weight: 600;
+    /* 粗細 */
+    color: #f5f5f5;
+    text-decoration: underline 3px dotted; 
+    letter-spacing: 5px;
+    font-family: 'Tilt Warp', sans-serif;
+    position: relative;
+}
+
+h1::before {
+    content: 'Welcome!';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #2c3748;
+    white-space: nowrap;
+    /* 文字不換行 */
+    overflow: hidden;
+    /* 多出隱藏 */
+    animation: move 3s linear infinite;
+    /* 執行塗抹動畫:動畫名 時長 線性 無限播放 */
+}
+
+@keyframes move {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* 跑馬燈 */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+    padding: 5px 0;
+    border-bottom: 1px solid #000000;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee-content2 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee-content3 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee3 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
