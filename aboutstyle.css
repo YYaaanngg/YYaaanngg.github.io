@@ -31,7 +31,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    transform: translateX(0%);
+    transform: translateX(-100%);
     transition: all .5s;
 }
 
@@ -79,19 +79,6 @@ body {
     transform: translate(-5px, -5px) rotate(-1deg); /* 往左移5px、上移5px、逆時針旋轉1度 */
 }
 
-@media(min-width: 375px) {
-    .card {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-@media(min-width: 920px) {
-    .card {
-        width: 100%;
-        height: auto;
-    }
-}
 
 h2 {
     width: 300px;
