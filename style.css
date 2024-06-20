@@ -1,12 +1,119 @@
+body {
+    background-color: #e4e8f1;
+}
+
+/* 大圖 */
 .heroimg {
-    background-image: url(7.jpg);
+    background-image: url(img/7.jpg);
     background-size: cover;
 }
 
-.text-mary {
-    color: rgb(255, 255, 255);
+@media(min-width: 375px) {
+    .heroimg {
+        background-size: 100%;
+    }
 }
 
+/* 首頁方形 */
+.heroimg .slogan {
+    text-align: center;
+    background-color:#e4e8f1;
+    box-shadow: var(--box-shadow);
+    padding: 90px 100px 0 100px;
+    margin-top: 300px;
+    /* max-width: 100px;
+    max-height: 50%; */
+}
+
+/* 塗抹動畫 */
+h1 {
+    font-size: 45px;
+    font-weight: 600;
+    /* 粗細 */
+    color: #f5f5f5;
+    text-decoration: underline 3px dotted; 
+    letter-spacing: 5px;
+    font-family: 'Tilt Warp', sans-serif;
+    position: relative;
+}
+
+h1::before {
+    content: 'Welcome!';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #2c3748;
+    white-space: nowrap;
+    /* 文字不換行 */
+    overflow: hidden;
+    /* 多出隱藏 */
+    animation: go 3s linear infinite;
+    /* 執行塗抹動畫:動畫名 時長 線性 無限播放 */
+}
+
+@keyframes go {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+/* 首頁標語 */
+.slogan p {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.515);
+    font-family: 'Tilt Warp', sans-serif;
+    line-height: 1.5;
+}
+
+
+.head-photo-img{
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    /* 圖片上移 */
+    margin-top: -160px; 
+}
+
+.head-photo-img img {
+    width: 100%;
+    height: auto;
+}
+
+/* 小logo */
+.image-img-img {
+    width: 15%;
+    height: 15%;
+    margin:  auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.image-img-img img {
+    width: 100%;
+    height: auto;
+}
+
+@media(min-width: 375px) {
+    .image-img-img {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media(min-width: 920px) {
+    .image-img-img {
+        width: 15%;
+        height: 15%;
+    }
+}
+
+/* 按鈕 */
 .btn-mary {
     background-color: rgb(94, 94, 95);
     color: #fff;
@@ -25,8 +132,69 @@
     color: #fff;
 }
 
+/* 作品移動 */
+.container2 {
+    width: 100%;
+    overflow: hidden;
+    padding: 100px
+}
+
+.box {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    animation: move 30s infinite linear;
+}
+
+.box.active {
+    animation-play-state: paused;
+}
+
+.box:hover {
+    animation-play-state: paused;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.box .img {
+    flex-shrink: 0;
+    width: 20%;
+    height: 100%;
+    background-color: tomato;
+    overflow: hidden;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width: 375px) {
+    .box .img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media(min-width: 920px) {
+    .box .img {
+        width: 20%;
+        height: 100%;
+    }
+}
+
+卡片動畫
 .card {
-    transition: all .4s; /* 動畫漸變 */
+    transition: all .4s; /* 卡片動畫漸變 */
 }
 
 .card:hover {
@@ -58,48 +226,43 @@ h4 {
     margin-left: 70%;
 }
 
-h5 {
-    width: 220px;
+/* my paintings */
+.header {
     font-size: 35px;
     font-weight: 400;
     /* 粗細 */
     font-family: 'Tilt Warp', sans-serif;
-    margin:auto;
+    width:  100%;
+    height: 50px;
+    line-height: 40px;
+    text-align:center;
+    margin: 100px auto;
+    padding-top: 50px;
 }
 
-/* 塗抹動畫 */
-h1 {
-    font-size: 50px;
-    font-weight: 600;
-    /* 粗細 */
-    color: #f5f5f5;
-    text-decoration: underline 3px dotted; 
-    letter-spacing: 5px;
-    font-family: 'Tilt Warp', sans-serif;
+.header .line {
     position: relative;
+    display: inline-block;
+    padding: 0px 30px;
+
 }
 
-h1::before {
-    content: 'Welcome!';
+.header .line::after {
+    content: '';
+    width: 500px;
     position: absolute;
-    left: 0;
-    top: 0;
-    color: #2c3748;
-    white-space: nowrap;
-    /* 文字不換行 */
-    overflow: hidden;
-    /* 多出隱藏 */
-    animation: move 3s linear infinite;
-    /* 執行塗抹動畫:動畫名 時長 線性 無限播放 */
+    top: 20px;
+    right: -500px;
+    border-bottom:2px solid black ;
 }
 
-@keyframes move {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
+.header .line::before {
+    content: '';
+    width: 500px;
+    position: absolute;
+    top: 20px;
+    left: -500px;
+    border-bottom:2px solid black ;
 }
 
 /* 跑馬燈 */
@@ -108,7 +271,7 @@ h1::before {
     overflow: hidden;
     display: flex;
     margin: auto;
-    padding: 5px 0;
+    padding-top: 60px;
     border-bottom: 1px solid #000000;
     font-family: 'Nunito', sans-serif;
     
@@ -158,3 +321,4 @@ h1::before {
         transform: translateX(-100%);
     }
 }
+

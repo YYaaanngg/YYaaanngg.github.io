@@ -1,0 +1,252 @@
+body {
+    background-color:#e4e8f1;
+    padding-top: 100px;
+
+}
+
+/* 圖片 */
+.container-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* 彈性布局 允許換行 水平居中 */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    gap: 50px;
+
+}
+
+.photo-img {
+    overflow: hidden;
+    margin: 10%;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+}
+
+.photo-img img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: 0.35s;
+    /* 設置過度 */
+}
+
+.photo-img .text {
+    /* display: none;
+    justify-content: center;
+    align-items: center;
+    上面三行為了文字居中 */
+    position: absolute;
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    /* inset: 0; 填滿 */
+    inset: 20px;
+    padding: 0 15px;
+}
+
+.photo-img .text::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: 100%;
+    border-left: 4px solid rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: 0.5s;
+    /* 過度 */
+    transition-delay: 0.6s;
+    /* 過度延長時間 */
+}
+
+.photo-img .text h4,
+.photo-img .text p{
+    margin-bottom: 6px;
+    opacity: 0;
+    transition: .35s;
+}
+
+.photo-img .text h4{
+    font-weight: 600;
+    text-transform: uppercase;
+    transform: translate(30%,0%);
+    transition-delay: .3s;
+}
+
+.photo-img .text p{
+    font-weight: 200;
+    transform: translate(0%,30%);
+}
+
+.photo-img:hover img {
+    opacity: .3s;
+}
+
+.photo-img:hover .text h4 {
+    opacity: 1;
+    transform: translate(0%,0%);
+    transition-delay: .4s;
+}
+
+.photo-img:hover .text p {
+    opacity: .9;
+    transform: translate(0%,0%);
+    transition-delay: .6s;
+}
+
+
+.photo-img:hover .text::before {
+    left: 0;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+@media(min-width: 375px) {
+    .container-1 {
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(min-width: 920px) {
+    .container-1 {
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* 個人照
+.col-3 {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    padding-right: 10px;
+}
+
+.col-3 img {
+    width: 100%;
+    transition: all .5s;
+}
+
+.col-3:hover img {
+    transform: translateX(100%);
+}
+
+.col-3:hover .caption {
+    transform: translateX(0);
+}
+
+.caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: all .5s;
+}
+
+.caption img {
+    width: 100%;
+    transition: all .5s;
+}
+
+.caption:hover img {
+    transform: translateX(0);
+} */ */
+
+/* 按鈕 */
+.btn-mary {
+    background-color: rgb(94, 94, 95);
+    color: #fff;
+}
+.btn-mary:hover {
+    background-color: rgb(94, 94, 95);
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: rgb(94, 94, 95);
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: rgb(94, 94, 95);
+    color: #fff;
+}
+
+h5 {
+    font-size: 30px;
+    font-weight: 400;
+    /* 粗細 */
+    font-family: 'Tilt Warp', sans-serif;
+    margin:0 auto;
+}
+
+
+/* 跑馬燈
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+    padding: 5px 0;
+    border-bottom: 1px solid #000000;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee-content2 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee-content3 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee3 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+} */
